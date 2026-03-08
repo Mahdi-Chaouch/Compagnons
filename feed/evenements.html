@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Événements — Compagnons</title>
+<link rel="icon" type="image/png" href="../images/logo_simple.png">
+  <link rel="stylesheet" href="../CSS/feed.css" />
+<link rel="stylesheet" href="../CSS/elemental.css">
+</head>
+
+<body>
+  <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+  <div id="feed-header-mobile-container"></div>
+  <main class="page">
+
+    <!-- partie gauche -->
+    <aside class="left-shell">
+      <div class="left-card">
+        <div class="left-inner">
+          <div class="left-top">
+            <img src="../images/logo.png" alt="Compagnons" class="brand-logo">
+          </div>
+
+          <nav class="left-menu" aria-label="Menu principal">
+            <a class="menu-item" href="../feed/feed.html"><span class="mi-ico">🐾</span><span class="mi-text">Fil d’actualité</span></a>
+            <a class="menu-item" href="../feed/messagerie.html"><span class="mi-ico">✉️</span><span class="mi-text">Messagerie</span></a>
+            <a class="menu-item" href="../feed/communaute.html"><span class="mi-ico">👥</span><span class="mi-text">Communauté</span></a>
+            <a class="menu-item" href="../feed/favoris.html"><span class="mi-ico">★</span><span class="mi-text">Favoris</span></a>
+            <a class="menu-item" href="../feed/evenements.html"><span class="mi-ico">📅</span><span class="mi-text">Événements</span></a>
+            <a class="menu-item" href="../feed/notifications.html"><span class="mi-ico">❤️</span><span class="mi-text">Notifications</span></a>
+            <a class="menu-item" href="../feed/parametres.html"><span class="mi-ico">⚙️</span><span class="mi-text">Paramètres</span></a>
+            <a class="menu-item-premium" href="compagnons-plus.html"><span class="mi-ico">👑</span><span class="mi-text">Compagnons +</span></a>
+          </nav>
+
+          <div class="left-bottom">
+            <a class="profile-pill" href="../feed/profil.html">
+              <span class="avatar">🐶</span>
+              <div class="pp-text">
+                <div class="pp-name">Profil</div>
+                <div class="pp-sub">Voir mon compte</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- partie centre -->
+    <section class="center">
+      <div class="center-wrap center-wrap--wide">
+
+        <div class="glass events-head">
+          <div>
+            <h2 class="page-title">Événements à venir</h2>
+            <div class="events-sub">Balades, ateliers, adoptions…</div>
+          </div>
+
+          <a class="btn-create" href="#" title="Créer un événement">+ Créer</a>
+        </div>
+
+        <!-- EVENT 1 -->
+        <article class="glass event-card">
+          <img src="../images/balade.jpg" class="event-banner" alt="Grande Balade Collective">
+
+          <div class="event-details">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Juin</span>
+            </div>
+
+            <div class="event-info">
+              <h3>Grande Balade Collective 🌲</h3>
+
+              <div class="event-meta">
+                <span>🕒 14h00</span>
+                <span>📍 Forêt de Fontainebleau</span>
+              </div>
+
+              <p class="event-desc">
+                Rejoignez-nous pour une promenade de 2h accessible à tous les chiens sociables.
+                Prévoir de l’eau !
+              </p>
+
+              <button class="btn-participate" type="button" data-state="off">Participer</button>
+              <div class="event-foot">12 participants déjà inscrits</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- EVENT 2 -->
+        <article class="glass event-card">
+          <img src="../images/clubcanin.png" class="event-banner event-banner--contain" alt="Atelier Agility Débutant">
+
+          <div class="event-details">
+            <div class="event-date">
+              <span class="day">22</span>
+              <span class="month">Juin</span>
+            </div>
+
+            <div class="event-info">
+              <h3>Atelier Agility Débutant 🎾</h3>
+
+              <div class="event-meta">
+                <span>🕒 10h00</span>
+                <span>📍 Club Canin 77</span>
+              </div>
+
+              <p class="event-desc">
+                Initiation aux parcours d’obstacles. Venez tester l’agilité de votre compagnon
+                avec nos éducateurs.
+              </p>
+
+              <button class="btn-participate" type="button" data-state="off">Participer</button>
+              <div class="event-foot">5 places restantes</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- EVENT 3 -->
+        <article class="glass event-card">
+          <img src="../images/spa.jpg" class="event-banner" alt="Journée d'Adoption SPA">
+
+          <div class="event-details">
+            <div class="event-date">
+              <span class="day">01</span>
+              <span class="month">Juil</span>
+            </div>
+
+            <div class="event-info">
+              <h3>Journée d’Adoption SPA 🏠</h3>
+
+              <div class="event-meta">
+                <span>🕒 09h - 18h</span>
+                <span>📍 Refuge de Vaux-le-Pénil</span>
+              </div>
+
+              <p class="event-desc">
+                Venez rencontrer nos pensionnaires qui attendent une famille.
+                Animations et stands sur place.
+              </p>
+
+              <button class="btn-participate" type="button" data-state="off">Participer</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- partie droite -->
+    <aside class="right">
+      <div class="right-inner">
+
+        <section class="glass right-card">
+          <h3>Suggestions pour vous</h3>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clubcanin.png" alt="Club Canin 77">
+            <div class="sug-text">
+              <div class="sug-title">Club Canin 77</div>
+              <div class="sug-sub">Dressage</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clinique.png" alt="Clinique du Parc">
+            <div class="sug-text">
+              <div class="sug-title">Clinique du Parc</div>
+              <div class="sug-sub">Santé</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/BlasonFbleau.png" alt="Mairie de Fontainebleau">
+            <div class="sug-text">
+              <div class="sug-title">Mairie de Fontainebleau</div>
+              <div class="sug-sub">Officiel</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+        </section>
+
+        <section class="glass right-card">
+          <h3>Accès rapide</h3>
+          <nav class="quick-links">
+            <a href="/accueil/decouvrir.html">Découvrir <span>›</span></a>
+            <a href="/accueil/decouvrir.html">Qui sommes-nous <span>›</span></a>
+            <a href="/aide/aide.html">Centre d’aide <span>›</span></a>
+            <a href="/aide/contact.html">Contact <span>›</span></a>
+            <a href="/légal/regles.html">Règles <span>›</span></a>
+            <a href="/légal/politique-confidentialite.html">Confidentialité <span>›</span></a>
+          </nav>
+        </section>
+
+        <section class="glass right-card right-footer">
+          <div class="copy">© <span id="year"></span> Compagnons</div>
+          <div class="logos">
+            <img src="../images/UPEC-IUT-Senart-Fontainebleau.png" alt="UPEC / IUT Sénart Fontainebleau">
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Participer / Inscrit 
+    document.querySelectorAll(".btn-participate").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const on = btn.dataset.state === "on";
+        btn.dataset.state = on ? "off" : "on";
+        btn.textContent = on ? "Participer" : "Inscrit ✔";
+        btn.classList.toggle("is-on", !on);
+      });
+    });
+  </script>
+
+  <!-- Styles spécifiques Événements -->
+  <style>
+    .events-head{
+      padding: 14px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .events-sub{
+      margin-top: 2px;
+      font-weight: 800;
+      color: rgba(11,18,32,0.60);
+      font-size: 13px;
+    }
+    .btn-create{
+      text-decoration:none;
+      font-weight: 950;
+      color:#fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+      box-shadow: 0 10px 18px rgba(45,140,255,0.18);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      white-space: nowrap;
+    }
+    .btn-create:hover{ transform: translateY(-1px); opacity: .96; }
+
+    .event-card{
+      overflow:hidden;
+    }
+    .event-banner{
+      width:100%;
+      height: 170px;
+      object-fit: cover;
+      display:block;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.65);
+    }
+    .event-banner--contain{
+      object-fit: contain;
+      padding: 10px;
+      background: rgba(255,255,255,0.85);
+    }
+
+    .event-details{
+      padding: 14px;
+      position: relative;
+    }
+
+    .event-date{
+      position: absolute;
+      top: -28px;
+      right: 14px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.10);
+      min-width: 70px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .event-date .day{
+      display:block;
+      font-size: 20px;
+      font-weight: 1000;
+      color: rgba(24,99,214,0.95);
+      line-height: 1;
+    }
+    .event-date .month{
+      display:block;
+      font-size: 12px;
+      font-weight: 900;
+      color: rgba(11,18,32,0.55);
+      text-transform: uppercase;
+      margin-top: 3px;
+      letter-spacing: .4px;
+    }
+
+    .event-info h3{
+      margin: 0 0 10px;
+      color: rgba(11,18,32,0.92);
+      font-weight: 1000;
+      padding-right: 90px; /* laisse la place pour la date */
+    }
+
+    .event-meta{
+      display:flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-weight: 850;
+      color: rgba(11,18,32,0.62);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .event-desc{
+      margin: 0 0 12px;
+      color: rgba(11,18,32,0.75);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .btn-participate{
+      width: 100%;
+      border: 1px solid rgba(24,99,214,0.22);
+      background: rgba(255,255,255,0.90);
+      color: rgba(24,99,214,0.95);
+      padding: 12px 14px;
+      border-radius: 999px;
+      font-weight: 1000;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn-participate:hover{
+      transform: translateY(-1px);
+      border-color: rgba(24,99,214,0.38);
+      background: rgba(24,99,214,0.06);
+    }
+    .btn-participate.is-on{
+      border-color: rgba(34,197,94,0.35);
+      background: rgba(34,197,94,0.12);
+      color: rgba(21,128,61,1);
+    }
+
+    .event-foot{
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 850;
+      color: rgba(11,18,32,0.55);
+    }
+  </style>
+  <style>
+    /* Dark mode*/
+    body.dark-mode .event-card{
+      background: #1e293b;
+      border-color: #334155;
+      box-shadow: none;
+    }
+    body.dark-mode .event-head h3,
+    body.dark-mode .event-head span,
+    body.dark-mode .event-info,
+    body.dark-mode .event-foot{
+      color: #cbd5e1;
+    }
+    body.dark-mode .btn-participate{
+      background: rgba(56,189,248,0.12);
+      border-color: rgba(56,189,248,0.28);
+      color: #e2e8f0;
+    }
+  </style>
+  <script src="../js/include.js"></script>
+</body>
+</html>

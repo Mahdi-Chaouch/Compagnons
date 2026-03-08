@@ -1,0 +1,726 @@
+/* ===== HEADER BANDEAU PRO ===== */
+.header-container {
+    width: 100%;
+    height: 100px; 
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none; 
+    z-index: 10000;
+
+    /* Fond noir uni + ligne dégradée en bas */
+    background: #000000;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #1190CB, #2ECC71);
+    border-image-slice: 1;
+    border-radius: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustement du logo pour la nouvelle hauteur */
+.logo img {
+    transition: transform 0.3s ease;
+    width: 180px; 
+    margin: 0; 
+    margin-top: -5px;
+    display: block;
+    border: none;
+    background: none;
+}
+
+
+
+
+
+/* ===== LIENS DE NAVIGATION (TEXTE SIMPLE) ===== */
+
+.nav-bar ul li a:hover {
+    background-color: transparent;
+    border: none;
+    
+    /* On applique le dégradé SUR le texte */
+    background-image: linear-gradient(90deg, #1190CB, #2ECC71);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    color: transparent;
+    
+    cursor: pointer;
+}
+
+/* Lien actif (page en cours) */
+.nav-bar ul li a.active {
+    background-image: linear-gradient(90deg, #1190CB, #2ECC71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Effet au survol : Le texte prend le dégradé du site */
+.nav-bar ul li a:hover {
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+
+    border: none; 
+}
+
+/* ===== GROUPE LOGO + SLOGAN ===== */
+.logo-group {
+    display: flex;      
+    align-items: center; 
+    gap: 15px;           /
+}
+
+/* Le style du slogan */
+.slogan {
+    /* CORRECTION : Utilise la police par défaut du site */
+
+    
+    color: #cccccc;      
+    font-size: 20px;     
+    font-weight: 600;   
+    letter-spacing: 0.5px; 
+    
+    /* Séparation verticale */
+    border-left: 1px solid #555;
+    padding-left: 15px;
+    
+    /* Pour l'aligner parfaitement avec le texte du logo s'il y en a */
+    margin-top: 5px; /* On applique le même décalage que le logo si besoin */
+}
+
+/* ===== RESPONSIVE (MOBILE) ===== */
+/* On cache le slogan sur téléphone pour pas que ça écrase tout */
+@media screen and (max-width: 768px) {
+    .slogan {
+        display: none;
+    }
+}
+
+
+
+.logo img:hover {
+    transform: scale(1.1); 
+}
+
+
+
+.nav-bar ul li a {
+    /* 1. On enlève tout le style "Bouton/Bulle" d'avant */
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 5px 0; 
+    
+    /* 2. Style du texte "Classique" */
+    color: #ffffff;      
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize; 
+    
+    /* 3. Le soulignement blanc */
+    text-decoration: underline;
+    text-decoration-color: #ffffff; 
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 6px;     
+    
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+}
+
+/* --- LE "TRUC" CSS POUR LA PAGE ACTIVE --- */
+body.page-accueil .nav-bar .lien-accueil,
+body.page-rejoindre .nav-bar .lien-rejoindre,
+body.page-decouvrir .nav-bar .lien-decouvrir,
+body.page-createur .nav-bar .lien-createur,
+body.page-contact .nav-bar .lien-contact,
+body.page-abonnement .nav-bar .lien-abonnement,
+
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+    
+    /* 1. On enlève le soulignement blanc */
+    text-decoration: none;
+    
+    /* 2. On applique le dégradé directement sur le texte */
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    
+    /* Propriétés pour "découper" le fond selon la forme du texte */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* 3. On rend le texte transparent pour voir le dégradé derrière */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Sécurité pour Chrome/Safari */
+    
+    font-weight: 700; /* On met un peu plus gras pour bien voir la couleur */
+}
+
+/* Responsiveness */
+.humburger {
+    display: none; /* Masqué par défaut */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.humburger .ligne {
+    width: 30px;
+    height: 4px;
+    background-color: #fefefe;
+    border-radius: 2px;
+}
+
+/* Adaptation pour les petits écrans */
+@media only screen and (max-width: 768px) {
+    .nav-bar ul {
+        display: none; /* Masquer le menu */
+        flex-direction: column;
+        background-color: #1190CB;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-bar ul.active {
+        display: flex;
+    }
+
+    .humburger {
+        display: flex;
+    }
+}
+
+
+
+
+/* ===== FOOTER ===== */
+.site-footer {
+    margin-top: 80px;
+    background: #000000;
+    color: #ffffff;
+    position: relative;
+}
+
+/* ligne dégradée en haut */
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+}
+
+.site-footer__inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 40px 20px 18px;
+}
+
+.site-footer__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.8fr 0.8fr 1.1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.site-footer__title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.site-footer__subtitle {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 12px;
+}
+
+.site-footer__text {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.site-footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer__links li {
+    margin: 10px 0;
+}
+
+.site-footer__links a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: 0.2s ease-in-out;
+}
+
+.site-footer__links a:hover {
+    opacity: 1;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* CTA (boutons) */
+.site-footer__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.site-footer__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 16px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+    border: 1px solid transparent;
+    font-size: 14px;
+}
+
+.site-footer__btn--primary {
+    color: #ffffff;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+}
+
+.site-footer__btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.site-footer__btn--ghost {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.75);
+}
+
+.site-footer__btn--ghost:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+}
+
+
+.footer__logo {
+    width: 120px;
+    margin-top: 10px;
+}
+/* Bas de footer */
+.site-footer__bottom {
+    margin-top: 26px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.site-footer__mini-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.site-footer__mini-links a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.site-footer__mini-links a:hover {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .site-footer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background: #fefefe;
+    
+    font-family: "Arial", sans-serif;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-4px);
+  background: rgba(0, 0, 0, 0.9);
+}
+/* ================= MENU BURGER & MOBILE (SIDEBAR DROITE) ================= */
+
+/* 1. Configuration de base pour PC (Remet le menu à l'horizontale) */
+.nav-bar ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* On cache les éléments mobile sur PC */
+.mobile-only, .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white; 
+}
+
+/* 2. MEDIA QUERY : UNIQUEMENT POUR MOBILE (max 768px) */
+@media (max-width: 768px) {
+    
+    /* Afficher le bouton burger */
+    .hamburger {
+        display: block;
+        z-index: 10001; 
+    }
+
+    /* Animation du burger (la croix) */
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* STYLE DE LA SIDEBAR (A DROITE) */
+    .nav-bar ul {
+        /* On écrase le style PC */
+        position: fixed;
+        flex-direction: column;
+        
+        /* C'est ici qu'on définit que ça vient de DROITE */
+        left: auto;
+        right: -100%; /* Caché hors écran à droite */
+        
+        top: 0;      
+        height: 100vh;
+        width: 75%;  
+        max-width: 300px;
+        
+        background-color: #000000; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 25px;
+        
+        /* Animation fluide vers la droite */
+        transition: right 0.4s ease; 
+        
+        /* Ombre et Bordure à gauche */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+        border-right: none;
+        border-left: 1px solid #333; 
+        
+        z-index: 10000;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* QUAND LE MENU EST OUVERT (CLASSE ACTIVE) */
+    .nav-bar.active ul {
+        right: 0; /* On ramène le menu sur l'écran */
+    }
+
+    /* Affichage des boutons mobile */
+    .mobile-only {
+        display: block;
+        width: 80%;
+    }
+
+    /* Bouton vert spécial */
+    .btn-sidebar-cta {
+        background: linear-gradient(90deg, #1190CB, #2ECC71) !important;
+        color: white !important;
+        border: none !important;
+    }
+    
+    /* Ajustements généraux mobile */
+    .hero__title { font-size: 32px; }
+    .image-acceuil { width: 100%; height: auto; }
+}
+/* ================= HEADER FEED MOBILE ================= */
+
+/* 1. SUR PC : ON CACHE LE HEADER MOBILE (Indispensable) */
+#feed-header-mobile-container, .feed-header-container {
+    display: none !important;
+}
+
+/* 2. SUR MOBILE : ON L'AFFICHE ET ON LE STYLISE */
+@media (max-width: 768px) {
+    
+    /* On force l'affichage du conteneur */
+    #feed-header-mobile-container {
+        display: block !important;
+    }
+
+    /* Style du Header blanc fixe */
+    .feed-header-container {
+        display: flex !important; /* Force l'affichage flex */
+        align-items: center;
+        justify-content: space-between;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 0 15px;
+        z-index: 20000;
+        
+        /* On annule les bordures de l'autre header */
+        border: none;
+        border-radius: 0;
+        transform: none;
+    }
+
+    /* LE LOGO (On force une petite taille) */
+    .feed-logo-center img {
+        height: 35px !important;
+        width: auto !important;
+        margin: 0 !important;
+        display: block;
+    }
+
+    /* Le menu Burger gauche */
+    .feed-burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 30px;
+        height: 30px;
+    }
+    .f-bar {
+        width: 100%; /* Pleine largeur du bouton */
+        height: 3px;
+        background-color: #333;
+        display: block; /* S'assure que les barres s'affichent */
+    }
+
+    /* Icônes de droite */
+    .feed-actions-right {
+        display: flex;
+        gap: 15px;
+        font-size: 20px;
+    }
+    .feed-actions-right a { text-decoration: none; color: #333; }
+
+    /* SIDEBAR (Le menu qui s'ouvre) */
+    .feed-sidebar-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        z-index: 20001;
+        transition: left 0.3s ease;
+        box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #eee;
+    }
+    
+    .feed-sidebar-menu.active { left: 0; }
+
+    /* Contenu du menu */
+    .sidebar-header { padding: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
+    .sidebar-links { padding: 10px 0; overflow-y: auto; }
+    .sidebar-links li a { padding: 15px 20px; display: flex; gap: 10px; color: #333; font-size: 16px; border-bottom: 1px solid #f5f5f5; }
+    
+    /* Overlay sombre */
+    .feed-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); z-index: 20000; display: none;
+    }
+    .feed-overlay.active { display: block; }
+    
+    /* Cacher les éléments PC du Feed */
+    .left-shell, .right { display: none; }
+    .page { padding-top: 70px; }
+    .center { width: 100%; padding: 0 10px; }
+}
+/* =======================================================
+   DARK MODE  (CORRECTION ILLISIBILITÉ)
+   ======================================================= */
+
+/* 1. FOND ET TEXTE GLOBAL */
+body.dark-mode {
+    background: #0f172a !important; /* Bleu nuit profond */
+    color: #e2e8f0 !important;      /* Gris clair */
+}
+
+/*  FORCER LES TEXTES À DEVENIR BLANCS (Ecrase tout le reste) */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
+body.dark-mode h4, body.dark-mode strong, body.dark-mode b,
+body.dark-mode .post-name,
+body.dark-mode .post-text,     
+body.dark-mode .sug-title,
+body.dark-mode .pp-name,
+body.dark-mode .setting-title,
+body.dark-mode .page-title,
+body.dark-mode .auth-form h1,
+body.dark-mode .auth-card h2,
+body.dark-mode .hero__title,     
+body.dark-mode .infos h4 {
+    color: #ffffff !important;
+}
+
+/* Textes secondaires (Gris clair pour la lecture) */
+body.dark-mode p, body.dark-mode li, body.dark-mode span, body.dark-mode label,
+body.dark-mode .post-meta,
+body.dark-mode .post-likes,
+body.dark-mode .sug-sub,
+body.dark-mode .pp-sub,
+body.dark-mode .setting-desc,
+body.dark-mode .auth-form p,
+body.dark-mode .auth-card p,
+body.dark-mode .hero__subtitle,
+body.dark-mode .hero__kicker,
+body.dark-mode .infos p {
+    color: #cbd5e1 !important;
+}
+
+/* 3. CARTES ET CONTENEURS (LA CORRECTION MAJEURE) */
+
+body.dark-mode .glass,
+body.dark-mode .right-card,
+body.dark-mode .left-inner,
+body.dark-mode .post,            
+body.dark-mode .composer,        
+body.dark-mode .settings-card,
+body.dark-mode .contact-card,
+body.dark-mode .chat-area,
+body.dark-mode .auth-form,       
+body.dark-mode .auth-card,
+body.dark-mode .hero__content {  /* La carte blanche de l'accueil */
+    background: #1e293b !important; /* Gris bleuté uni */
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+    background-image: none !important; /* Supprime les dégradés blancs */
+}
+
+
+
+/* Liens Menu Gauche */
+body.dark-mode .menu-item,
+body.dark-mode .profile-pill {
+    background: transparent !important;
+    color: #e2e8f0 !important;
+    border-color: transparent !important;
+}
+body.dark-mode .menu-item:hover,
+body.dark-mode .profile-pill:hover {
+    background: #334155 !important;
+}
+
+/*  FORMULAIRES (Inputs & Recherche) */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .composer-input,
+body.dark-mode .contacts-search {
+    background: #020617 !important; 
+    color: #ffffff !important;      
+    border: 1px solid #475569 !important;
+}
+/* Couleur du texte "placeholder" (ex: Rechercher...) */
+body.dark-mode ::placeholder {
+    color: #64748b !important;
+    opacity: 1;
+}
+
+/* STRUCTURE (Header / Footer) */
+body.dark-mode .header-container,
+body.dark-mode .feed-header-container,
+body.dark-mode .feed-sidebar-menu,
+body.dark-mode .sidebar-header {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
+}
+body.dark-mode .site-footer {
+    background: #020617 !important;
+}
+/* Burger blanc */
+body.dark-mode .bar, body.dark-mode .f-bar {
+    background-color: #fff !important;
+}
+
+body.dark-mode .site-footer__text,
+body.dark-mode .site-footer__links a,
+body.dark-mode .site-footer__mini-links a {
+    color: #cbd5e1 !important;
+    opacity: 0.9;
+}

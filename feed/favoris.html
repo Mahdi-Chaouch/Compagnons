@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Favoris — Compagnons</title>
+<link rel="icon" type="image/png" href="../images/logo_simple.png">
+
+  <link rel="stylesheet" href="../CSS/feed.css" />
+<link rel="stylesheet" href="../CSS/elemental.css">
+</head>
+
+<body>        <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+  <div id="feed-header-mobile-container"></div>
+  <main class="page">
+
+    <!-- partie gauche -->
+    <aside class="left-shell">
+      <div class="left-card">
+        <div class="left-inner">
+          <div class="left-top">
+            <img src="../images/logo.png" alt="Compagnons" class="brand-logo">
+          </div>
+          <nav class="left-menu" aria-label="Menu principal">
+            <a class="menu-item" href="../feed/feed.html"><span class="mi-ico">🐾</span><span class="mi-text">Fil d’actualité</span></a>
+            <a class="menu-item" href="../feed/messagerie.html"><span class="mi-ico">✉️</span><span class="mi-text">Messagerie</span></a>
+            <a class="menu-item" href="../feed/communaute.html"><span class="mi-ico">👥</span><span class="mi-text">Communauté</span></a>
+            <a class="menu-item" href="../feed/favoris.html"><span class="mi-ico">★</span><span class="mi-text">Favoris</span></a>
+            <a class="menu-item" href="../feed/evenements.html"><span class="mi-ico">📅</span><span class="mi-text">Événements</span></a>
+            <a class="menu-item" href="../feed/notifications.html"><span class="mi-ico">❤️</span><span class="mi-text">Notifications</span></a>
+            <a class="menu-item" href="../feed/parametres.html"><span class="mi-ico">⚙️</span><span class="mi-text">Paramètres</span></a>
+            <a class="menu-item-premium" href="compagnons-plus.html"><span class="mi-ico">👑</span><span class="mi-text">Compagnons +</span></a>
+          </nav>
+          <div class="left-bottom">
+            <a class="profile-pill" href="../feed/profil.html">
+              <span class="avatar">🐶</span>
+              <div class="pp-text">
+                <div class="pp-name">Profil</div>
+                <div class="pp-sub">Voir mon compte</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- partie centre -->
+    <section class="center">
+      <div class="center-wrap center-wrap--wide">
+
+        <div class="glass fav-head">
+          <div>
+            <h2 class="page-title">Favoris</h2>
+            <div class="fav-sub">Vos publications sauvegardées</div>
+          </div>
+
+          <div class="fav-search">
+            <span class="fav-search-ico">🔎</span>
+            <input type="text" placeholder="Rechercher dans vos favoris..." />
+          </div>
+        </div>
+
+        <!-- FAVORI 1 -->
+        <article class="glass post fav-post" id="fav-1">
+          <header class="post-head">
+            <div class="post-user">
+              <div class="avatar-circle">
+                <img src="../images/pfp.png" alt="Cuisine pour Chiens"
+                     onerror="this.remove(); this.parentElement.textContent='🍖';">
+              </div>
+              <div>
+                <div class="post-name">Cuisine pour Chiens 🍖</div>
+                <div class="post-meta">Sauvegardé il y a 2 jours</div>
+              </div>
+            </div>
+
+            <button class="fav-btn" type="button" onclick="removeFav('fav-1')" title="Retirer des favoris">
+              ★
+            </button>
+          </header>
+
+          <p class="post-text">Recette de biscuits maison au beurre de cacahuète 🥜 ! Super facile à faire et ils adorent.</p>
+        </article>
+
+        <!-- FAVORI 2 -->
+        <article class="glass post fav-post" id="fav-2">
+          <header class="post-head">
+            <div class="post-user">
+              <div class="avatar-circle">
+                <img src="../images/sophieetchien.png" alt="Sophie Martin"
+                     onerror="this.remove(); this.parentElement.textContent='👩‍⚕️';">
+              </div>
+              <div>
+                <div class="post-name">
+                  Sophie Martin <span class="badge">Vétérinaire</span>
+                </div>
+                <div class="post-meta">Sauvegardé la semaine dernière</div>
+              </div>
+            </div>
+
+            <button class="fav-btn" type="button" onclick="removeFav('fav-2')" title="Retirer des favoris">
+              ★
+            </button>
+          </header>
+
+          <p class="post-text">⚠️ Rappel vaccination : N'oubliez pas le rappel contre la toux du chenil avant de mettre votre chien en pension cet été.</p>
+        </article>
+
+        <!-- FAVORI 3 -->
+        <article class="glass post fav-post" id="fav-3">
+          <header class="post-head">
+            <div class="post-user">
+              <div class="avatar-circle">
+                <img src="../images/spa.jpg" alt="SPA Refuge"
+                     onerror="this.remove(); this.parentElement.textContent='🏠';">
+              </div>
+              <div>
+                <div class="post-name">SPA Refuge</div>
+                <div class="post-meta">Sauvegardé hier</div>
+              </div>
+            </div>
+
+            <button class="fav-btn" type="button" onclick="removeFav('fav-3')" title="Retirer des favoris">
+              ★
+            </button>
+          </header>
+
+          <p class="post-text">Calendrier des événements d'adoption pour le mois de Juin ! 📅 Venez nombreux.</p>
+
+          <div class="post-media">
+            <img src="../images/balade.jpg" alt="Événement adoption"
+                 onerror="this.src='https://picsum.photos/900/620?random=33'">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- partie groite -->
+    <aside class="right">
+      <div class="right-inner">
+
+        <section class="glass right-card">
+          <h3>Suggestions pour vous</h3>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clubcanin.png" alt="Club Canin 77">
+            <div class="sug-text">
+              <div class="sug-title">Club Canin 77</div>
+              <div class="sug-sub">Dressage</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clinique.png" alt="Clinique du Parc">
+            <div class="sug-text">
+              <div class="sug-title">Clinique du Parc</div>
+              <div class="sug-sub">Santé</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/BlasonFbleau.png" alt="Mairie de Fontainebleau">
+            <div class="sug-text">
+              <div class="sug-title">Mairie de Fontainebleau</div>
+              <div class="sug-sub">Officiel</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+        </section>
+
+        <section class="glass right-card">
+          <h3>Accès rapide</h3>
+          <nav class="quick-links">
+            <a href="/accueil/decouvrir.html">Découvrir <span>›</span></a>
+            <a href="/accueil/decouvrir.html">Qui sommes-nous <span>›</span></a>
+            <a href="/aide/aide.html">Centre d’aide <span>›</span></a>
+            <a href="/aide/contact.html">Contact <span>›</span></a>
+            <a href="/légal/regles.html">Règles <span>›</span></a>
+            <a href="/légal/politique-confidentialite.html">Confidentialité <span>›</span></a>
+          </nav>
+        </section>
+
+        <section class="glass right-card right-footer">
+          <div class="copy">© <span id="year"></span> Compagnons</div>
+          <div class="logos">
+            <img src="../images/UPEC-IUT-Senart-Fontainebleau.png" alt="UPEC / IUT Sénart Fontainebleau">
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+
+    function removeFav(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (confirm("Voulez-vous retirer cette publication de vos favoris ?")) {
+        el.classList.add("fade-out");
+        setTimeout(() => { el.style.display = "none"; }, 450);
+      }
+    }
+  </script>
+
+  <!-- Styles spécifiques Favoris -->
+  <style>
+    .fav-head{
+      padding: 14px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .fav-sub{
+      margin-top: 2px;
+      font-weight: 800;
+      color: rgba(11,18,32,0.60);
+      font-size: 13px;
+    }
+    .fav-search{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.10);
+      background: rgba(255,255,255,0.92);
+      min-width: min(360px, 100%);
+    }
+    .fav-search input{
+      border: 0;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-weight: 750;
+    }
+    .fav-search-ico{ opacity:.7; }
+
+    .fav-btn{
+      border: 1px solid rgba(45,140,255,0.18);
+      background: rgba(45,140,255,0.08);
+      color: rgba(24,99,214,0.95);
+      font-weight: 950;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor:pointer;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .fav-btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(24,99,214,0.35);
+      background: rgba(45,140,255,0.12);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      margin-left: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 950;
+      color: rgba(11,18,32,0.78);
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.18);
+    }
+
+    .fade-out{
+      opacity: 0;
+      transform: translateX(40px);
+      transition: all 0.45s ease;
+    }
+
+    /* Dark mode */
+    body.dark-mode .fav-sub,
+    body.dark-mode .badge{
+      color: #cbd5e1;
+    }
+    body.dark-mode .fav-search{
+      background: #0b1220;
+      border-color: #334155;
+      color: #e2e8f0;
+    }
+    body.dark-mode .fav-search input{
+      color: #e2e8f0;
+    }
+    body.dark-mode .fav-btn{
+      background: rgba(56,189,248,0.14);
+      border-color: rgba(56,189,248,0.32);
+      color: #e2e8f0;
+    }
+    body.dark-mode .badge{
+      background: rgba(34,197,94,0.14);
+      border-color: rgba(34,197,94,0.32);
+    }
+
+    @media (max-width: 820px){
+      .fav-head{ flex-direction: column; align-items: stretch; }
+      .fav-search{ width: 100%; }
+    }
+  </style>
+  <script src="../js/include.js"></script>
+</body>
+</html>

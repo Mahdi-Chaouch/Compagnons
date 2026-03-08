@@ -1,0 +1,454 @@
+/* ===== STYLE RECRUTEMENT (Épuré & Moderne) ===== */
+
+:root {
+    --rec-accent: #1190CB;
+    --rec-accent-2: #2ECC71;
+    --rec-text: #1d1d1f;
+    --rec-muted: #6e6e73;
+    --rec-bg: #ffffff;
+    --rec-card-bg: #ffffff;
+    --rec-border: #f5f5f7;
+    --rec-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+body.page-recrutement {
+    background: var(--rec-bg);
+    color: var(--rec-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+main.recrutement-page {
+    padding-top: 120px; /* Espace pour le header fixe */
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- HERO SECTION (Centré et sans cadre) --- */
+.recrutement-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    padding: 20px 0;
+    /* On enlève les bordures et fonds gris pour un look épuré */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.pill {
+    display: inline-block;
+    background: rgba(17, 144, 203, 0.1);
+    color: var(--rec-accent);
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.recrutement-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Titre en dégradé */
+}
+
+.hero-lead {
+    font-size: 20px;
+    color: var(--rec-muted);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Actions Hero */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.rec-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rec-btn--primary {
+    background: linear-gradient(90deg, var(--rec-accent), var(--rec-accent-2));
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.rec-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+.rec-btn--ghost {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid transparent;
+}
+
+.rec-btn--ghost:hover {
+    background: #e8e8ed;
+}
+
+/* Highlights (3 petits blocs sous le hero) */
+.hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.highlight {
+    background: #ffffff;
+    border: 1px solid var(--rec-border);
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.highlight:hover {
+    transform: translateY(-3px);
+    border-color: #d2d2d7;
+}
+
+.highlight-title {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.highlight p {
+    font-size: 15px;
+    margin: 0;
+    color: var(--rec-muted);
+}
+
+/* --- TITRES DE SECTION --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--rec-muted);
+}
+
+/* --- CARTES POSTES (Job Offers) --- */
+.postes-section, .process-section, .principes-section, .cta-section {
+    margin-bottom: 100px;
+}
+
+.postes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.poste-card {
+    background: var(--rec-card-bg);
+    border: 1px solid var(--rec-border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--rec-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.poste-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.poste-meta {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #eef6fc;
+    color: var(--rec-accent);
+}
+
+.tag-light {
+    background: #f5f5f7;
+    color: #6e6e73;
+}
+
+.poste-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.poste-emoji {
+    font-size: 28px;
+    background: #fbfbfd;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.poste-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.poste-card p {
+    color: var(--rec-muted);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.poste-card ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    color: #424245;
+}
+
+.poste-card li {
+    margin-bottom: 8px;
+}
+
+.rec-link {
+    margin-top: auto;
+    font-weight: 700;
+    color: var(--rec-accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rec-link::after {
+    content: "→";
+    transition: transform 0.2s;
+}
+
+.rec-link:hover::after {
+    transform: translateX(4px);
+}
+
+.note {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--rec-muted);
+    font-size: 15px;
+}
+
+/* --- PROCESS STEPS --- */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.step-card:hover {
+    transform: scale(1.02);
+    border-color: #d2d2d7;
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(135deg, var(--rec-accent), var(--rec-accent-2));
+    color: #fff;
+    font-weight: 800;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.step-card h3 { font-size: 18px; margin-bottom: 8px; }
+.step-card p { font-size: 15px; color: var(--rec-muted); }
+
+/* --- VALEURS (Principes) --- */
+.principes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.principe-card {
+    background: #fbfbfd;
+    padding: 25px;
+    border-radius: 16px;
+    border-left: 4px solid var(--rec-accent);
+}
+
+.principe-card h3 { font-size: 18px; margin-bottom: 5px; }
+.principe-card p { color: var(--rec-muted); font-size: 15px; margin: 0; }
+.principe-dot { display: none; } /* On cache le dot, la bordure gauche suffit */
+
+/* --- CTA FINAL --- */
+.cta-card {
+    background: #111; /* Fond noir pour le contraste final */
+    color: #fff;
+    border-radius: 24px;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.cta-card h2 { font-size: 32px; margin-bottom: 10px; color: #fff; }
+.cta-card p { color: #a1a1a6; margin-bottom: 30px; font-size: 18px; }
+
+.cta-actions .rec-btn--ghost {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.cta-actions .rec-btn--ghost:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* =========================================
+   DARK MODE (Compatible feed.css)
+   ========================================= */
+body.dark-mode.page-recrutement {
+    background: #0f172a; /* Bleu nuit sombre */
+    color: #e2e8f0;
+}
+
+/* Titres blancs en dark mode */
+body.dark-mode .recrutement-hero h1,
+body.dark-mode .section-header h2,
+body.dark-mode .poste-card h3,
+body.dark-mode .step-card h3,
+body.dark-mode .principe-card h3,
+body.dark-mode .highlight-title {
+    color: #ffffff;
+}
+
+/* Textes gris clair */
+body.dark-mode .hero-lead,
+body.dark-mode .section-subtitle,
+body.dark-mode .poste-card p,
+body.dark-mode .poste-card ul,
+body.dark-mode .step-card p,
+body.dark-mode .principe-card p,
+body.dark-mode .highlight p,
+body.dark-mode .note {
+    color: #cbd5e1;
+}
+
+/* Cartes en mode sombre */
+body.dark-mode .poste-card,
+body.dark-mode .step-card,
+body.dark-mode .highlight {
+    background: #1e293b; /* Slate */
+    border-color: #334155;
+    box-shadow: none;
+}
+
+body.dark-mode .poste-emoji {
+    background: #0f172a;
+}
+
+body.dark-mode .principe-card {
+    background: #1e293b;
+    border-left-color: #38bdf8; /* Bleu plus clair */
+}
+
+/* Tags en dark mode */
+body.dark-mode .tag {
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+}
+body.dark-mode .tag-light {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+/* Boutons secondaires en dark mode */
+body.dark-mode .rec-btn--ghost {
+    background: transparent;
+    border-color: #cbd5e1;
+    color: #ffffff;
+}
+body.dark-mode .rec-btn--ghost:hover {
+    background: #334155;
+    border-color: transparent;
+}
+
+/* CTA final en dark mode (légèrement plus clair que le fond) */
+body.dark-mode .cta-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .recrutement-hero h1 { font-size: 32px; }
+    .hero-lead { font-size: 18px; }
+    
+    .postes-grid, .steps-grid, .principes-grid {
+        grid-template-columns: 1fr; /* Tout en une colonne */
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .rec-btn { width: 100%; }
+}

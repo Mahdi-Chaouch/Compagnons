@@ -1,0 +1,200 @@
+/* CSS commun pour les pages: aide, contact, règles, confidentialité */
+:root{
+  --bg: #f6fbff;
+  --text: #0b1220;
+  --muted: rgba(11,18,32,0.72);
+  --card: rgba(255,255,255,0.65);
+  --stroke: rgba(255,255,255,0.60);
+  --shadow: 0 18px 40px rgba(0,0,0,0.12);
+  --r: 18px;
+  --blue: #2d8cff;
+  --green: #22c55e;
+}
+
+*{ box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 50% 0%, #ffffff 0%, var(--bg) 55%, #eef7ff 100%);
+}
+
+/* Mode sombre générique pour aide/contact/règles */
+body.dark-mode {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --muted: #cbd5e1;
+  --card: #1e293b;
+  --stroke: #334155;
+  --shadow: none;
+  background: #0f172a;
+  color: var(--text);
+}
+body.dark-mode .card,
+body.dark-mode .glass {
+  background: var(--card);
+  border-color: var(--stroke);
+  box-shadow: none;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+  color: var(--text);
+}
+body.dark-mode p, body.dark-mode li, body.dark-mode span {
+  color: var(--muted);
+}
+
+/* Contenu de page */
+.page{
+  padding: 28px 18px 60px;
+}
+.container{
+  width: min(980px, 100%);
+  margin: 90px auto 0;
+}
+
+/* En-tête de page */
+.page-head{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin: 18px 0 18px;
+}
+.page-head h1{
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+.page-head p{
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Cartes */
+.card{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin: 20px 0;
+}
+.grid{
+  display: grid;
+  gap: 16px;
+}
+.grid-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 780px){
+  .grid-2, .grid-3{ grid-template-columns: 1fr; }
+}
+
+/* Boutons */
+.btn{
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: transform .15s ease, opacity .15s ease;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover{ transform: translateY(-1px); opacity: .95; }
+.btn-primary{
+  color: #fff;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+  box-shadow: 0 10px 22px rgba(45,140,255,0.25);
+}
+.btn-outline{
+  color: #000000;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+}
+.btn-outline:hover{
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+/* Liens */
+a{ color: #1863d6; }
+
+/* Recherche */
+.search{
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.search input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  outline: none;
+  background: rgba(255,255,255,0.9);
+}
+
+/* FAQ accordéon sans JS */
+details{
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.75);
+  padding: 12px 14px;
+}
+details + details{ margin-top: 10px; }
+summary{
+  cursor: pointer;
+  font-weight: 800;
+}
+details p{
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* Formulaire */
+form{
+  display: grid;
+  gap: 12px;
+}
+label{
+  font-weight: 700;
+  font-size: 14px;
+}
+input, select, textarea{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.92);
+  outline: none;
+}
+textarea{ min-height: 140px; resize: vertical; }
+
+/* Table "autorisé / interdit" */
+.rules-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+@media (max-width: 780px){
+  .rules-grid{ grid-template-columns: 1fr; }
+}
+.badge{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+}
+.badge-ok{ background: rgba(34,197,94,0.15); color: #137a38; }
+.badge-no{ background: rgba(239,68,68,0.12); color: #9a1b1b; }

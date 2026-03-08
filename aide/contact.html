@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Compagnons</title>
+  <link rel="icon" type="image/png" href="../images/logo_simple.png">
+  <link rel="stylesheet" href="../CSS/pages.css" />
+  <link rel="stylesheet" href="../CSS/elemental.css" />
+</head>
+
+<body class="page-contact">        
+  <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+  <div id="site-header"></div>
+
+  <main class="page">
+    <div class="container">
+      <section class="page-head">
+        <h1>Contact</h1>
+        <p>Une question ou un problème ? Écris-nous via le formulaire ci-dessous.</p>
+      </section>
+
+      <section class="grid grid-2">
+        <div class="card">
+          <h2 style="margin:0 0 10px;">Formulaire</h2>
+
+          <form action="#" method="post">
+            <div>
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" placeholder="Ton nom" required>
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="ton@email.com" required>
+            </div>
+
+            <div>
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choisir un sujet…</option>
+                <option>Problème de connexion</option>
+                <option>Problème technique</option>
+                <option>Signalement / modération</option>
+                <option>Confidentialité / données</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Explique ton problème clairement…" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 10px;">Infos</h2>
+          <p style="margin:0 0 10px;color:var(--muted);line-height:1.45;">
+            Avant de nous contacter, tu peux aussi consulter le <a href="aide.html">Centre d’aide</a>.
+          </p>
+
+          <div class="card" style="box-shadow:none;">
+            <p style="margin:0;"><strong>Délai de réponse :</strong> 24–48h (selon l’activité)</p>
+            <p style="margin:8px 0 0;"><strong>Email :</strong> support@compagnons.fr</p>
+          </div>
+
+          <div class="card" style="margin-top:12px; box-shadow:none;">
+            <p style="margin:0;"><strong>Signalement urgent :</strong></p>
+            <p style="margin:8px 0 0;color:var(--muted);">
+              Utilise aussi le bouton “Signaler” sur le profil ou la publication concernée.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/include.js"></script>
+</body>
+</html>

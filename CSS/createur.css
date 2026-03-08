@@ -1,0 +1,200 @@
+body.page-createur {
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    padding-top: 0;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1190CB 0%, #2ECC71 100%);
+    color: white;
+    margin-bottom: 50px;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.profile-card {
+    background: white;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: #f4f6f8;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-header .role {
+    color: #1190CB;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.bio {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.skill-tag {
+    background: #eefbf3;
+    color: #2ECC71;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #c8e6c9;
+}
+
+.social-links a {
+    color: #aaa;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #1190CB;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.profile-link:hover {
+    color: #1190CB;
+    text-decoration: underline;
+}
+
+.cta-button {
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    color: white !important;
+    border: none !important;
+}
+.cta-button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    color: #1190CB;
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 80px 18px;
+    }
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    .about-hero p {
+        font-size: 1.05rem;
+    }
+    .team-container {
+        gap: 22px;
+    }
+    .profile-card {
+        width: 100%;
+        max-width: 460px;
+    }
+    .card-body {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 1.9rem;
+    }
+    .about-hero p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - Compagnons</title>
+<link rel="icon" type="image/png" href="../images/logo_simple.png">
+  <link rel="stylesheet" href="../CSS/elemental.css">
+  <link rel="stylesheet" href="../CSS/auth.css">
+</head>
+
+<body>        
+  <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero-auth">
+      <div class="auth-overlay">
+        <form class="auth-form" action="../feed/feed.html" method="get">            
+          <h1>Se connecter</h1>
+          <p>Heureux de te revoir ! Connecte-toi pour acceder a ton espace Compagnons.</p>
+
+          <div class="auth-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="********" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="password">Mot de passe</label>
+            <input id="password" name="password" type="password" placeholder="********" required>
+          </div>
+
+          <div class="auth-row">
+            <label class="auth-check">
+              <input type="checkbox" name="remember">
+              Se souvenir de moi
+            </label>
+
+            <a class="auth-link" href="#">Mot de passe oublié ?</a>
+          </div>
+
+          <div class="auth-actions">
+            <a class="auth-btn auth-btn--primary" href="../feed/feed.html">Connexion</a>
+            <a class="auth-btn auth-btn--outline" href="inscription.html">Creer un compte</a>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+
+  <script src="../js/include.js"></script>
+</body>
+</html>

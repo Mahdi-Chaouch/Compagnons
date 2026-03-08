@@ -1,0 +1,244 @@
+/* ===== Accueil.css ===== */
+.secteur-animation {
+    background-color: #1190CB;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.secteur-titre {
+    text-align: center;
+
+}
+.titre-conteneur {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    transition: 0.3s;
+}
+.titre-conteneur:hover {
+    font-size: 55px;
+}
+.image-acceuil {
+    width: 100%;
+    height: auto;
+
+}
+.secteur-commande {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+.texte {
+    padding: 20px;
+    text-align: center;
+    font-size: 21px;
+}
+.bouton-secteur-commande {
+    width: 300px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.bouton {
+    display: block;
+    color: #fefefe;
+    background: #1190CB;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: none;
+}
+.button:hover {
+    color:#1190CB;
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+
+
+
+
+
+/* ===== HERO (sans image) ===== */
+.hero {
+    width: 100%;
+    padding: 70px 20px 40px;
+    position: relative;
+}
+
+/* fond léger (pas d'image) */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(17, 144, 203, 0.10), transparent 45%),
+        radial-gradient(circle at 85% 30%, rgba(46, 204, 113, 0.10), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 0.06), transparent 55%);
+    pointer-events: none;
+}
+
+.hero__inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__inner--solo {
+    display: flex;
+    justify-content: center;
+}
+
+.hero__content {
+    width: min(780px, 100%);
+    text-align: center;
+
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px 28px;
+
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(90deg, #1190CB, #2ECC71) border-box;
+
+    box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+.hero__kicker {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: #1b1b1b;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+.hero__title {
+    font-size: 56px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    color: #000000;
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2b2b2b;
+    opacity: 0.9;
+    margin: 0 auto 20px;
+    max-width: 650px;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.hero__btn--primary {
+    color: #ffffff;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+}
+
+.hero__btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero__btn--ghost {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #000000;
+}
+
+.hero__btn--ghost:hover {
+    border: 1px solid transparent;
+    color: #ffffff;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+}
+
+.recrutement {
+    width: 100%;
+    padding: 70px 20px 50px;
+    background: #f7f9fb;
+}
+
+.recrutement__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e6e9ed;
+    border-radius: 18px;
+    padding: 42px 38px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.recrutement__kicker {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #6c6c6c;
+    margin-bottom: 10px;
+}
+
+.recrutement__title {
+    font-size: 36px;
+    margin-bottom: 14px;
+    color: #0f0f0f;
+}
+
+.recrutement__text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333333;
+    opacity: 0.9;
+    margin: 0 auto 20px;
+    max-width: 720px;
+}
+
+.recrutement__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #0f0f0f;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.recrutement__link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 900px) {
+    .hero__title { font-size: 44px; }
+    .recrutement__title { font-size: 30px; }
+    .recrutement__inner { padding: 32px 26px; }
+}
+
+

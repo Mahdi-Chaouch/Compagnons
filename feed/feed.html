@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fil d’actualité — Compagnons</title>
+  <link rel="icon" type="image/png" href="../images/logo_simple.png">
+  <link rel="stylesheet" href="../CSS/elemental.css">
+  <link rel="stylesheet" href="../CSS/feed.css" />
+<link rel="stylesheet" href="../CSS/elemental.css">
+</head>
+
+<body>       
+ <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+ <div id="feed-header-mobile-container"></div>
+  <main class="page">
+
+    <!-- partie gauche -->
+    <aside class="left-shell">
+      <div class="left-card">
+        <div class="left-inner">
+          <div class="left-top">
+            <img src="../images/logo.png" alt="Compagnons" class="brand-logo">
+          </div>
+          <nav class="left-menu" aria-label="Menu principal">
+            <a class="menu-item" href="feed.html"><span class="mi-ico">🐾</span><span class="mi-text">Fil d’actualité</span></a>
+            <a class="menu-item" href="messagerie.html"><span class="mi-ico">✉️</span><span class="mi-text">Messagerie</span></a>
+            <a class="menu-item" href="communaute.html"><span class="mi-ico">👥</span><span class="mi-text">Communauté</span></a>
+            <a class="menu-item" href="favoris.html"><span class="mi-ico">★</span><span class="mi-text">Favoris</span></a>
+            <a class="menu-item" href="evenements.html"><span class="mi-ico">📅</span><span class="mi-text">Événements</span></a>
+            <a class="menu-item" href="notifications.html"><span class="mi-ico">❤️</span><span class="mi-text">Notifications</span></a>
+            <a class="menu-item" href="parametres.html"><span class="mi-ico">⚙️</span><span class="mi-text">Paramètres</span></a>
+            <a class="menu-item-premium" href="compagnons-plus.html"><span class="mi-ico">👑</span><span class="mi-text">Compagnons +</span></a>
+          </nav>
+
+          <div class="left-bottom">
+            <a class="profile-pill" href="profil.html">
+              <span class="avatar">🐶</span>
+              <div class="pp-text">
+                <div class="pp-name">Profil</div>
+                <div class="pp-sub">Voir mon compte</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- partie centre -->
+    <section class="center">
+      <div class="center-wrap">
+
+        <!-- Composer -->
+        <article class="glass composer">
+          <div class="composer-row">
+            <div class="avatar-circle">🐶</div>
+            <input class="composer-input" type="text" placeholder="Quoi de neuf avec votre compagnon ?" />
+          </div>
+
+          <div class="composer-actions">
+            <div class="action-left">
+              <button class="chip" type="button">🖼️ Photo</button>
+              <button class="chip" type="button">🎥 Vidéo</button>
+            </div>
+            <button class="btn-primary" type="button">Publier</button>
+          </div>
+        </article>
+
+        <!-- POST 1 -->
+        <article class="glass post">
+          <header class="post-head">
+            <div class="post-user">
+              <div class="avatar-circle">
+                <img src="../images/personne1.jpg" alt="Lenny">
+              </div>
+              <div>
+                <div class="post-name">Lenny</div>
+                <div class="post-meta">il y a 2h • Créteil</div>
+              </div>
+            </div>
+            <input type="checkbox" id="follow-post-1" class="toggle-follow">
+            <label for="follow-post-1" class="follow follow-pill follow-toggle">
+              <span class="txt-follow">Suivre</span>
+              <span class="txt-following">Abonné ✓</span>
+            </label>
+          </header>
+
+          <p class="post-text">Tigrou ADORE se poser sur la machine à laver</p>
+
+          <div class="post-media">
+            <img src="../images/chat_lenny.jpg" alt="Post chat">
+          </div>
+
+          <footer class="post-foot">
+            <div class="post-actions">
+
+              <span class="toggle-wrap">
+                <input type="checkbox" id="like-post-1" class="toggle-like">
+                <label for="like-post-1" class="action-btn action-like">❤️ <span>J’aime</span></label>
+              </span>
+
+              <button type="button" class="action-btn">💬 Commenter</button>
+              <button type="button" class="action-btn">↗ Partager</button>
+
+              <span class="toggle-wrap">
+                <input type="checkbox" id="save-post-1" class="toggle-save">
+                <label for="save-post-1" class="action-btn action-btn-save action-save">★ <span>Enregistrer</span></label>
+              </span>
+
+            </div>
+            <div class="post-likes">Aimé par <strong>Vous</strong> et <strong>23 autres</strong></div>
+          </footer>
+        </article>
+
+        <!-- POST 2 -->
+        <article class="glass post">
+          <header class="post-head">
+            <div class="post-user">
+              <div class="avatar-circle">
+                <img src="../images/spa.jpg" alt="SPA">
+              </div>
+              <div>
+                <div class="post-name">SPA</div>
+                <div class="post-meta">il y a 2h • Refuge</div>
+              </div>
+            </div>
+            <input type="checkbox" id="follow-post-2" class="toggle-follow">
+            <label for="follow-post-2" class="follow follow-pill follow-toggle">
+              <span class="txt-follow">Suivre</span>
+              <span class="txt-following">Abonné ✓</span>
+            </label>
+          </header>
+
+          <p class="post-text">
+            Grande promenade collective ce matin en forêt de Fontainebleau ! 🌲🐾 Merci à tous les participants.
+            #Nature #Compagnons #Fontainebleau
+          </p>
+
+          <div class="post-media">
+            <img src="../images/balade.jpg" alt="Balade">
+          </div>
+
+          <footer class="post-foot">
+            <div class="post-actions">
+
+              <span class="toggle-wrap">
+                <input type="checkbox" id="like-post-2" class="toggle-like">
+                <label for="like-post-2" class="action-btn action-like">❤️ <span>J’aime</span></label>
+              </span>
+
+              <button type="button" class="action-btn">💬 Commenter</button>
+              <button type="button" class="action-btn">↗ Partager</button>
+
+              <span class="toggle-wrap">
+                <input type="checkbox" id="save-post-2" class="toggle-save">
+                <label for="save-post-2" class="action-btn action-btn-save action-save">★ <span>Enregistrer</span></label>
+              </span>
+
+            </div>
+            <div class="post-likes">Aimé par <strong>Vous</strong> et <strong>58 autres</strong></div>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- partie droite -->
+    <aside class="right">
+      <div class="right-inner">
+
+        <section class="glass right-card">
+          <h3>Suggestions pour vous</h3>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clubcanin.png" alt="Club Canin 77">
+            <div class="sug-text">
+              <div class="sug-title">Club Canin 77</div>
+              <div class="sug-sub">Dressage</div>
+            </div>
+            <input type="checkbox" id="follow-post-4" class="toggle-follow">
+            <label for="follow-post-4" class="follow follow-pill follow-toggle">
+              <span class="txt-follow">Suivre</span>
+              <span class="txt-following">Abonné ✓</span>
+            </label>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clinique.png" alt="Clinique du Parc">
+            <div class="sug-text">
+              <div class="sug-title">Clinique du Parc</div>
+              <div class="sug-sub">Santé</div>
+            </div>
+            <input type="checkbox" id="follow-post-3" class="toggle-follow">
+            <label for="follow-post-3" class="follow follow-pill follow-toggle">
+              <span class="txt-follow">Suivre</span>
+              <span class="txt-following">Abonné ✓</span>
+            </label>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/BlasonFbleau.png" alt="Mairie de Fontainebleau">
+            <div class="sug-text">
+              <div class="sug-title">Mairie de Fontainebleau</div>
+              <div class="sug-sub">Officiel</div>
+            </div>
+            <input type="checkbox" id="follow-post-5" class="toggle-follow">
+            <label for="follow-post-5" class="follow follow-pill follow-toggle">
+              <span class="txt-follow">Suivre</span>
+              <span class="txt-following">Abonné ✓</span>
+            </label>
+          </div>
+        </section>
+
+         <section class="glass right-card">
+          <h3>Accès rapide</h3>
+          <nav class="quick-links">
+            <a href="/accueil/decouvrir.html">Découvrir <span>›</span></a>
+            <a href="/accueil/decouvrir.html">Qui sommes-nous <span>›</span></a>
+            <a href="/aide/aide.html">Centre d’aide <span>›</span></a>
+            <a href="/aide/contact.html">Contact <span>›</span></a>
+            <a href="/légal/regles.html">Règles <span>›</span></a>
+            <a href="/légal/politique-confidentialite.html">Confidentialité <span>›</span></a>
+          </nav>
+        </section>
+
+        <section class="glass right-card right-footer">
+          <div class="copy">© <span id="year"></span> Compagnons</div>
+          <div class="logos">
+            <img src="../images/UPEC-IUT-Senart-Fontainebleau.png" alt="UPEC / IUT Sénart Fontainebleau">
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+  <script src="../js/include.js"></script>
+</body>
+</html>

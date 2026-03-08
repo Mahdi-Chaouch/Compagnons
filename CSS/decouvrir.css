@@ -1,0 +1,215 @@
+/* ===== CONFIGURATION GÉNÉRALE ===== */
+body {
+    background-color: #ffffff;
+    color: #1d1d1f; /* Noir doux type Apple */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    padding-top: 100px; /* Pour ne pas être caché par le header fixe */
+}
+
+/* ===== HERO SECTION ===== */
+.hero-decouverte {
+    text-align: center;
+    padding: 80px 20px 100px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge-pill {
+    background-color: #f5f5f7;
+    color: #1190CB;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero-decouverte h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    /* Petit dégradé sur le titre pour le style */
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Fallback si needed */
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-decouverte p {
+    font-size: 20px;
+    color: #6e6e73;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: #000000;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-secondary {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover { transform: scale(1.05); }
+.btn-secondary:hover { background: #e8e8ed; }
+
+/* ===== FEATURES (Sections alternées) ===== */
+.feature-section {
+    background-color: #fafafa; /* Fond très léger pour séparer du hero */
+    padding: 80px 0;
+}
+
+.feature-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px; /* Beaucoup d'espace entre les blocs */
+}
+
+/* On inverse l'ordre pour les rangées paires */
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1d1d1f;
+}
+
+.feature-text p {
+    font-size: 17px;
+    color: #6e6e73;
+    line-height: 1.7;
+}
+
+/* Les blocs visuels (carrés colorés) */
+.feature-visual {
+    flex: 1;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.gradient-blue { background: linear-gradient(135deg, #1190CB, #89C4F4); }
+.gradient-green { background: linear-gradient(135deg, #2ECC71, #96E6B3); }
+.gradient-mix { background: linear-gradient(135deg, #1190CB, #2ECC71); }
+
+/* Animation simple sur les emojis */
+.visual-placeholder {
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+.feature-visual:hover .visual-placeholder {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ===== FINAL CTA (Version Fond Blanc) ===== */
+.final-cta {
+    text-align: center;
+    padding: 100px 20px;
+    
+    /* MODIFICATION : Fond blanc et texte sombre */
+    background: #ffffff; 
+    color: #1d1d1f;
+    
+    /* Une petite bordure discrète pour séparer de la section précédente */
+    border-top: 1px solid #f0f0f0;
+}
+
+.final-cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1d1d1f; /* Le titre devient noir */
+}
+
+.final-cta p {
+    font-size: 18px;
+    color: #6e6e73; /* Le sous-titre devient gris */
+    margin-bottom: 30px;
+}
+
+/* Le bouton reste le même, il ressortira super bien sur le blanc */
+.btn-big {
+    display: inline-block;
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    color: #ffffff;
+    padding: 18px 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.btn-big:hover {
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+    .hero-decouverte h1 { font-size: 32px; }
+    
+    .feature-row, .feature-row.reverse {
+        flex-direction: column; /* Tout empiler sur mobile */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .feature-visual {
+        width: 100%;
+        height: 200px; /* Moins haut sur mobile */
+    }
+    
+    .cta-group {
+        flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+}

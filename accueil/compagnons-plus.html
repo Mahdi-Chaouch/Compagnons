@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compagnons + | Premium</title>
+    <link rel="icon" type="image/png" href="../images/logo_simple.png">
+    
+    <link rel="stylesheet" href="../CSS/elemental.css">
+    <link rel="stylesheet" href="../CSS/abonnement.css">
+</head>
+
+<body class="page-abonnement">        
+    <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+
+    <div id="site-header"></div>
+
+    <main class="subscription-page">
+
+        <section class="sub-hero">
+            <span class="badge-premium">👑 Compagnons +</span>
+            <h1>Passez à la vitesse supérieure</h1>
+            <p>
+                Profitez d'une expérience enrichie pour vous et votre animal. Plus de visibilité, plus d'outils, plus d'avantages exclusifs.
+            </p>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon">🚀</span>
+                <h3>Boost de visibilité</h3>
+                <p>Vos publications sont mises en avant dans le fil d'actualité de votre ville. Idéal pour partager une urgence ou une belle photo.</p>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">📌</span>
+                <h3>Favoris illimités</h3>
+                <p>Ne perdez plus jamais une info. Sauvegardez autant de conseils, d'adresses et de profils que vous le souhaitez.</p>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">🔍</span>
+                <h3>Recherche avancée</h3>
+                <p>Accédez à des filtres précis : race, âge, comportement, distance exacte. Trouvez le compagnon de balade idéal.</p>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">🛡️</span>
+                <h3>Badge Vérifié</h3>
+                <p>Montrez que vous êtes un membre de confiance avec le badge "Membre Vérifié" sur votre profil.</p>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">🎁</span>
+                <h3>Réductions Partenaires</h3>
+                <p>Jusqu'à -20% chez nos partenaires locaux (vétérinaires, toiletteurs, animaleries).</p>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">🚫</span>
+                <h3>Zéro Publicité</h3>
+                <p>Naviguez en toute tranquillité. Aucune coupure publicitaire dans votre fil d'actualité.</p>
+            </div>
+        </section>
+
+        <section class="plans-section" id="offres">
+            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 10px;">Choisissez votre formule</h2>
+            <p style="color: #6e6e73;">Sans engagement. Annulation en un clic.</p>
+
+            <div class="plans-container">
+                
+                <div class="plan-card">
+                    <div class="plan-name">Étudiant</div>
+                    <div class="plan-price">2,99€ <span>/mois</span></div>
+                    <ul class="plan-features">
+                        <li>Boost 1x / semaine</li>
+                        <li>Favoris illimités</li>
+                        <li>Filtres de recherche basiques</li>
+                        <li>Badge étudiant</li>
+                    </ul>
+                    <a href="#" class="btn-plan btn-outline">Choisir</a>
+                </div>
+
+                <div class="plan-card popular">
+                    <div class="popular-badge">Recommandé</div>
+                    <div class="plan-name">Annuel</div>
+                    <div class="plan-price">39,99€ <span>/an</span></div>
+                    <ul class="plan-features">
+                        <li><strong>Tout en illimité</strong></li>
+                        <li>Boosts illimités</li>
+                        <li>Accès prioritaire événements</li>
+                        <li>Réductions partenaires (-20%)</li>
+                        <li>Support prioritaire 24/7</li>
+                    </ul>
+                    <a href="#" class="btn-plan btn-fill">Commencer l'essai gratuit</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-name">Mensuel</div>
+                    <div class="plan-price">4,99€ <span>/mois</span></div>
+                    <ul class="plan-features">
+                        <li>Boost 1x / semaine</li>
+                        <li>Favoris illimités</li>
+                        <li>Recherche avancée complète</li>
+                        <li>Zéro publicité</li>
+                    </ul>
+                    <a href="#" class="btn-plan btn-outline">Choisir</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+            
+            <details>
+                <summary>Est-ce que l'application reste gratuite ?</summary>
+                <p>Oui, absolument ! L'utilisation classique de Compagnons (poster, commenter, discuter) est et restera 100% gratuite. L'abonnement n'est là que pour ceux qui veulent aller plus loin.</p>
+            </details>
+
+            <details>
+                <summary>Puis-je annuler à tout moment ?</summary>
+                <p>Oui. Il n'y a aucun engagement de durée (sauf pour l'offre annuelle où vous payez d'un coup). Vous pouvez stopper le renouvellement en un clic dans vos paramètres.</p>
+            </details>
+
+            <details>
+                <summary>Comment fonctionne l'essai gratuit ?</summary>
+                <p>Vous avez 7 jours pour tester toutes les fonctionnalités Premium. Si vous n'êtes pas convaincu, annulez avant la fin des 7 jours et vous ne serez pas débité.</p>
+            </details>
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+    
+    <script src="../js/include.js"></script>
+    
+    <script>
+        document.querySelectorAll('.btn-plan').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert("Ceci est une démo étudiante. Aucun paiement réel n'est effectué.");
+            });
+        });
+    </script>
+</body>
+</html>

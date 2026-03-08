@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Messagerie — Compagnons</title>
+<link rel="icon" type="image/png" href="../images/logo_simple.png">
+
+  <link rel="stylesheet" href="../CSS/feed.css" />
+<link rel="stylesheet" href="../CSS/elemental.css">
+</head>
+
+<body>        <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+  <div id="feed-header-mobile-container"></div>
+  <main class="page">
+
+    <!-- partie gauche -->
+    <aside class="left-shell">
+      <div class="left-card">
+        <div class="left-inner">
+          <div class="left-top">
+            <img src="../images/logo.png" alt="Compagnons" class="brand-logo">
+          </div>
+
+          <nav class="left-menu" aria-label="Menu principal">
+            <a class="menu-item" href="feed.html"><span class="mi-ico">🐾</span><span class="mi-text">Fil d’actualité</span></a>
+            <a class="menu-item" href="messagerie.html"><span class="mi-ico">✉️</span><span class="mi-text">Messagerie</span></a>
+            <a class="menu-item" href="communaute.html"><span class="mi-ico">👥</span><span class="mi-text">Communauté</span></a>
+            <a class="menu-item" href="favoris.html"><span class="mi-ico">★</span><span class="mi-text">Favoris</span></a>
+            <a class="menu-item" href="evenements.html"><span class="mi-ico">📅</span><span class="mi-text">Événements</span></a>
+            <a class="menu-item" href="notifications.html"><span class="mi-ico">❤️</span><span class="mi-text">Notifications</span></a>
+            <a class="menu-item" href="parametres.html"><span class="mi-ico">⚙️</span><span class="mi-text">Paramètres</span></a>
+            <a class="menu-item-premium" href="compagnons-plus.html"><span class="mi-ico">👑</span><span class="mi-text">Compagnons +</span></a>
+          </nav>
+
+          <div class="left-bottom">
+            <a class="profile-pill" href="profil.html">
+              <span class="avatar">🐶</span>
+              <div class="pp-text">
+                <div class="pp-name">Profil</div>
+                <div class="pp-sub">Voir mon compte</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- partie centre -->
+    <section class="center">
+      <div class="center-wrap center-wrap--wide">
+
+        <h2 class="page-title">Messagerie</h2>
+
+        <!-- Radios : switch de conversation -->
+        <input type="radio" name="chat-select" id="chat-1" class="chat-radio" checked>
+        <input type="radio" name="chat-select" id="chat-2" class="chat-radio">
+        <input type="radio" name="chat-select" id="chat-3" class="chat-radio">
+
+        <section class="messaging-layout">
+
+          <!-- Contacts -->
+          <div class="glass contacts-column">
+            <div class="column-header">
+              <h3>Discussions</h3>
+              <input class="contacts-search" type="text" placeholder="Rechercher..." />
+            </div>
+
+            <label for="chat-1" class="contact-card">
+              <div class="avatar-wrapper online">
+                <img src="../images/personne2.avif" alt="Sarah & Rex">
+                <span class="status-indicator"></span>
+              </div>
+              <div class="infos">
+                <h4>Sarah & Rex</h4>
+                <p>En ligne</p>
+              </div>
+            </label>
+
+            <label for="chat-2" class="contact-card">
+              <div class="avatar-wrapper">
+                <img src="../images/clubcanin.png" alt="Club Canin 77">
+                <span class="status-indicator"></span>
+              </div>
+              <div class="infos">
+                <h4>Club Canin 77</h4>
+                <p>Dernier message : 14h30</p>
+              </div>
+            </label>
+
+            <label for="chat-3" class="contact-card">
+              <div class="avatar-wrapper online">
+                <img src="../images/personne1.jpg" alt="Lucas Mochi">
+                <span class="status-indicator"></span>
+              </div>
+              <div class="infos">
+                <h4>Lucas Mochi</h4>
+                <p>Dernier message : Hier</p>
+              </div>
+            </label>
+          </div>
+
+          <!-- Chat -->
+          <div class="glass chat-area">
+
+            <!-- VIEW 1 -->
+            <div class="chat-view view-1">
+              <input type="checkbox" id="send-1" class="send-trigger">
+
+              <div class="chat-header">
+                <div class="user-info">
+                  <img src="../images/personne2.avif" alt="Sarah & Rex">
+                  <div>
+                    <h3>Sarah & Rex</h3>
+                    <div class="chat-sub">En ligne</div>
+                  </div>
+                </div>
+                <button class="icon-soft" type="button" title="Infos">ℹ️</button>
+              </div>
+
+              <div class="messages-list">
+                <div class="msg received">Salut ! On va promener Rex ? 🐕</div>
+                <div class="msg sent">Carrément ! À quelle heure ?</div>
+                <div class="msg received">Vers 16h au parc ?</div>
+                <div class="msg sent hidden-reply">Ça marche, à tout à l'heure ! 👋</div>
+              </div>
+
+              <div class="input-zone">
+                <input type="text" placeholder="Écrivez un message..." />
+                <label for="send-1" class="send-btn" title="Envoyer">➤</label>
+              </div>
+            </div>
+
+            <!-- VIEW 2 -->
+            <div class="chat-view view-2">
+              <input type="checkbox" id="send-2" class="send-trigger">
+
+              <div class="chat-header">
+                <div class="user-info">
+                  <img src="../images/clubcanin.png" alt="Club Canin 77">
+                  <div>
+                    <h3>Club Canin 77</h3>
+                    <div class="chat-sub">Dernier message : 14h30</div>
+                  </div>
+                </div>
+                <button class="icon-soft" type="button" title="Infos">ℹ️</button>
+              </div>
+
+              <div class="messages-list">
+                <div class="msg received">Bonjour, le cours de samedi est confirmé.</div>
+                <div class="msg sent hidden-reply">C'est noté, merci ! 👍</div>
+              </div>
+
+              <div class="input-zone">
+                <input type="text" placeholder="Répondre..." />
+                <label for="send-2" class="send-btn" title="Envoyer">➤</label>
+              </div>
+            </div>
+
+            <!-- VIEW 3 -->
+            <div class="chat-view view-3">
+              <input type="checkbox" id="send-3" class="send-trigger">
+
+              <div class="chat-header">
+                <div class="user-info">
+                  <img src="../images/personne1.jpg" alt="Lucas Mochi">
+                  <div>
+                    <h3>Lucas Mochi</h3>
+                    <div class="chat-sub">Dernier message : Hier</div>
+                  </div>
+                </div>
+                <button class="icon-soft" type="button" title="Infos">ℹ️</button>
+              </div>
+
+              <div class="messages-list">
+                <div class="msg sent">Trop drôle ta vidéo !</div>
+                <div class="msg received">Haha merci, Mochi est une star.</div>
+                <div class="msg sent hidden-reply">Tu m'étonnes ! 😹</div>
+              </div>
+
+              <div class="input-zone">
+                <input type="text" placeholder="Répondre..." />
+                <label for="send-3" class="send-btn" title="Envoyer">➤</label>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- partie droite -->
+    <aside class="right">
+      <div class="right-inner">
+
+        <section class="glass right-card">
+          <h3>Suggestions pour vous</h3>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clubcanin.png" alt="Club Canin 77">
+            <div class="sug-text">
+              <div class="sug-title">Club Canin 77</div>
+              <div class="sug-sub">Dressage</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/clinique.png" alt="Clinique du Parc">
+            <div class="sug-text">
+              <div class="sug-title">Clinique du Parc</div>
+              <div class="sug-sub">Santé</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+
+          <div class="suggestion">
+            <img class="sug-img" src="../images/BlasonFbleau.png" alt="Mairie de Fontainebleau">
+            <div class="sug-text">
+              <div class="sug-title">Mairie de Fontainebleau</div>
+              <div class="sug-sub">Officiel</div>
+            </div>
+            <a class="follow follow-pill" href="#">Suivre</a>
+          </div>
+        </section>
+
+         <section class="glass right-card">
+          <h3>Accès rapide</h3>
+          <nav class="quick-links">
+            <a href="/accueil/decouvrir.html">Découvrir <span>›</span></a>
+            <a href="/accueil/decouvrir.html">Qui sommes-nous <span>›</span></a>
+            <a href="/aide/aide.html">Centre d’aide <span>›</span></a>
+            <a href="/aide/contact.html">Contact <span>›</span></a>
+            <a href="/légal/regles.html">Règles <span>›</span></a>
+            <a href="/légal/politique-confidentialite.html">Confidentialité <span>›</span></a>
+          </nav>
+        </section>
+        <section class="glass right-card right-footer">
+          <div class="copy">© <span id="year"></span> Compagnons</div>
+          <div class="logos">
+            <img src="../images/UPEC-IUT-Senart-Fontainebleau.png" alt="UPEC / IUT Sénart Fontainebleau">
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+  <script src="../js/include.js"></script>
+</body>
+</html>
