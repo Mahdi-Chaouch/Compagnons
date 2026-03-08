@@ -48,7 +48,7 @@ Compagnons/
 
 ---
 
-# 🚀 Lancer le projet
+#  Lancer le projet
 
 Le projet doit être lancé via un **serveur local** pour que les scripts JavaScript fonctionnent correctement.  
 Ouvrir directement `index.html` avec le navigateur (protocole `file://`) peut empêcher certains scripts et ressources de se charger.
