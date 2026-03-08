@@ -35,13 +35,21 @@ Ce projet est principalement centré sur **la conception d'une interface web** e
 Compagnons/
 │
 ├── accueil/ # Pages liées à l'accueil
+
 ├── aide/ # Page d'aide
+
 ├── feed/ # Fil d'actualité
+
 ├── login/ # Pages de connexion
+
 ├── includes/ # Éléments réutilisables (header, footer...)
+
 ├── images/ # Images du site
+
 ├── js/ # Scripts JavaScript
+
 ├── CSS/ # Feuilles de style
+
 │
 └── index.html # Page principale
 
