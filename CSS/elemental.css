@@ -365,6 +365,72 @@ body.page-abonnement .nav-bar .lien-abonnement,
     opacity: 1;
 }
 
+/* ===== BANDEAU SAE / PROJET ÉTUDIANT ===== */
+
+.sae-banner {
+    position: fixed;
+    top: 100px; /* juste sous le header (100px de haut) */
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #fef9c3, #fffbeb);
+    border-bottom: 1px solid #facc15;
+    font-size: 15px;
+    z-index: 9500;
+}
+
+.sae-banner__text {
+    color: #854d0e;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sae-banner__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sae-banner__link {
+    font-weight: 600;
+    color: #854d0e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+}
+
+.sae-banner__link:hover {
+    color: #92400e;
+}
+
+.sae-banner__close {
+    border: none;
+    background: transparent;
+    color: #854d0e;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+}
+
+body.dark-mode .sae-banner {
+    background: linear-gradient(90deg, #451a03, #78350f);
+    border-top-color: #facc15;
+}
+
+body.dark-mode .sae-banner__text,
+body.dark-mode .sae-banner__link,
+body.dark-mode .sae-banner__close {
+    color: #fffbeb;
+}
+
+body.dark-mode .sae-banner__link:hover {
+    color: #facc15;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .site-footer__grid {

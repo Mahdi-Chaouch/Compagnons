@@ -274,21 +274,37 @@
       .notif-item{ flex-direction: column; }
       .notif-btn{ width: 100%; }
     }
-  </style>
-  <style>
-    /* Dark mode*/
-    body.dark-mode .notif-card{
-      background: #1e293b;
-      border-color: #334155;
-      box-shadow: none;
+
+    /* Dark mode spécifique notifications */
+    body.dark-mode .notif-sub{
+      color: #94a3b8;
+    }
+    body.dark-mode .notif-item{
+      border-color: #1f2937;
+    }
+    body.dark-mode .notif-item.unread{
+      background: rgba(37,99,235,0.22);
+      border-color: #2563eb;
+    }
+    body.dark-mode .notif-ico{
+      background: #020617;
+      border-color: #1f2937;
+    }
+    body.dark-mode .notif-title{
+      color: #e5e7eb;
     }
     body.dark-mode .notif-meta{
       color: #cbd5e1;
     }
-    body.dark-mode .badge{
-      background: rgba(56,189,248,0.14);
-      border-color: rgba(56,189,248,0.32);
-      color: #e2e8f0;
+    body.dark-mode .notif-btn{
+      background: #020617;
+      border-color: #1d4ed8;
+      color: #e5e7eb;
+    }
+    body.dark-mode .notif-btn:hover{
+      background: #1d4ed8;
+      border-color: #2563eb;
+      color: #f9fafb;
     }
   </style>
   <script src="../js/include.js"></script>

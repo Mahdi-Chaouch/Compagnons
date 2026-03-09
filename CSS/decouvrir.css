@@ -213,3 +213,52 @@ main {
         box-sizing: border-box;
     }
 }
+
+/* ===== DARK MODE SPÉCIFIQUE PAGE DÉCOUVRIR ===== */
+
+body.dark-mode.page-decouvrir {
+    background-color: #020617 !important;
+}
+
+body.dark-mode .hero-decouverte {
+    color: #e2e8f0;
+}
+
+body.dark-mode .hero-decouverte p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .badge-pill {
+    background-color: #0f172a;
+    color: #facc15;
+}
+
+body.dark-mode .feature-section {
+    background-color: #020617;
+}
+
+body.dark-mode .feature-text h2 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .feature-text p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .feature-visual {
+    box-shadow: 0 20px 40px rgba(15,23,42,0.8);
+}
+
+body.dark-mode .final-cta {
+    background: #020617;
+    color: #e5e7eb;
+    border-top: 1px solid #1f2937;
+}
+
+body.dark-mode .final-cta h2 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .final-cta p {
+    color: #cbd5e1;
+}

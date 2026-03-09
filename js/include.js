@@ -229,9 +229,46 @@ function highlightCurrentPage() {
   });
 }
 
+function initSaePopup() {
+  const banner = document.getElementById('sae-banner');
+  if (!banner) return;
+
+  let alreadySeen = false;
+  try {
+    alreadySeen =
+      window.localStorage &&
+      window.localStorage.getItem('sae_popup_seen') === '1';
+  } catch (e) {
+    alreadySeen = false;
+  }
+
+  if (alreadySeen) {
+    banner.style.display = 'none';
+    return;
+  }
+
+  banner.style.display = 'flex';
+
+  const closeBtn = banner.querySelector('.sae-banner__close');
+  const moreBtn = banner.querySelector('.sae-banner__link');
+
+  const hide = () => {
+    banner.style.display = 'none';
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem('sae_popup_seen', '1');
+      }
+    } catch (e) {}
+  };
+
+  if (closeBtn) closeBtn.addEventListener('click', hide);
+  if (moreBtn) moreBtn.addEventListener('click', hide);
+}
+
 Promise.all(loadTasks).then(() => {
   applyBasePrefix(basePrefix);
   highlightCurrentPage();
   applyThemeFromPreference();
   listenSystemThemeChanges();
+  initSaePopup();
 });
