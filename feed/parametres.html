@@ -446,24 +446,52 @@
   </style>
   <script>
     const themeSelect = document.getElementById('themeSelector');
-    
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        if(themeSelect) themeSelect.value = "Sombre";
-    }
 
+    // Initialisation de la valeur du select en fonction de la préférence enregistrée
+    (function initThemeSelector() {
+      if (!themeSelect) return;
+
+      const stored = (typeof getThemePreference === 'function'
+        ? getThemePreference()
+        : localStorage.getItem('theme')) || 'auto';
+
+      if (stored === 'dark') {
+        themeSelect.value = 'Sombre';
+        document.body.classList.add('dark-mode');
+      } else if (stored === 'light') {
+        themeSelect.value = 'Clair';
+        document.body.classList.remove('dark-mode');
+      } else {
+        themeSelect.value = 'Auto';
+      }
+    })();
 
     if (themeSelect) {
-        themeSelect.addEventListener('change', function() {
-            if (this.value === 'Sombre') {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark'); // On sauvegarde le choix
-            } else {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
-        });
+      themeSelect.addEventListener('change', function () {
+        const label = this.value;
+
+        if (label === 'Sombre') {
+          if (typeof setThemePreference === 'function') {
+            setThemePreference('dark');
+          } else {
+            localStorage.setItem('theme', 'dark');
+            document.body.classList.add('dark-mode');
+          }
+        } else if (label === 'Clair') {
+          if (typeof setThemePreference === 'function') {
+            setThemePreference('light');
+          } else {
+            localStorage.setItem('theme', 'light');
+            document.body.classList.remove('dark-mode');
+          }
+        } else {
+          if (typeof setThemePreference === 'function') {
+            setThemePreference('auto');
+          } else {
+            localStorage.setItem('theme', 'auto');
+          }
+        }
+      });
     }
   </script>
   <script src="../js/include.js"></script>

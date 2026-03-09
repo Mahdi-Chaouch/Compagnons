@@ -235,6 +235,30 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.12);
 }
 
+/* Variante lisible en mode sombre */
+body.dark-mode .recrutement {
+    background: #020617;
+}
+
+body.dark-mode .recrutement__inner {
+    background: #0b1120;
+    border-color: #1f2937;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+body.dark-mode .recrutement__kicker {
+    color: #94a3b8;
+}
+
+body.dark-mode .recrutement__title {
+    color: #e5e7eb;
+}
+
+body.dark-mode .recrutement__text {
+    color: #cbd5e1;
+    opacity: 1;
+}
+
 @media (max-width: 900px) {
     .hero__title { font-size: 44px; }
     .recrutement__title { font-size: 30px; }

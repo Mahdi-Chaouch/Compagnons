@@ -880,6 +880,45 @@ body.dark-mode .icon-soft {
     color: #e2e8f0;
 }
 
+/* Suggestions et accès rapide lisibles dans le feed */
+body.dark-mode .suggestion {
+    background: #020617;
+    border-color: #1f2937;
+}
+body.dark-mode .sug-title{
+    color: #e5e7eb;
+}
+body.dark-mode .sug-sub{
+    color: #94a3b8;
+}
+body.dark-mode .follow-pill{
+    background: #0b1120;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+body.dark-mode .quick-links a{
+    background: #020617;
+    border-color: #1f2937;
+    color: #e5e7eb;
+}
+body.dark-mode .quick-links a span{
+    color: #9ca3af;
+}
+
+/* Boutons sous les posts (Commenter / Partager / Enregistrer) */
+body.dark-mode .action-btn {
+    background: #020617;
+    border-color: #1f2937;
+    color: #e5e7eb;
+}
+
+/* Petits "chips" (ex: Ajouter une photo, Humeur, etc.) */
+body.dark-mode .chip{
+    background: #020617;
+    border-color: #1f2937;
+    color: #e5e7eb;
+}
+
 /* On assombrit toutes les cartes "glass" */
 body.dark-mode .glass,
 body.dark-mode .left-card,

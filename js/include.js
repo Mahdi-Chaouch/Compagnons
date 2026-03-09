@@ -81,6 +81,79 @@ function applyBasePrefix(prefix) {
 
 const basePrefix = getBasePrefix();
 
+function getStoredTheme() {
+  try {
+    return window.localStorage ? window.localStorage.getItem('theme') : null;
+  } catch (e) {
+    console.warn('Impossible de lire le thème sauvegardé :', e);
+    return null;
+  }
+}
+
+function systemPrefersDark() {
+  if (!window.matchMedia) return false;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+// Applique le thème effectif (clair / sombre) en combinant préférence système + choix utilisateur
+function applyThemeFromPreference() {
+  const stored = getStoredTheme();
+  let useDark;
+
+  if (stored === 'dark') {
+    useDark = true;
+  } else if (stored === 'light') {
+    useDark = false;
+  } else {
+    // "auto" ou aucune préférence => on suit l'OS
+    useDark = systemPrefersDark();
+  }
+
+  if (useDark) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
+
+function listenSystemThemeChanges() {
+  if (!window.matchMedia) return;
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const handler = () => {
+    const stored = getStoredTheme();
+    // Si l'utilisateur a choisi explicitement clair/sombre, on ne suit plus l'OS
+    if (stored === 'dark' || stored === 'light') return;
+    applyThemeFromPreference();
+  };
+
+  if (typeof mq.addEventListener === 'function') {
+    mq.addEventListener('change', handler);
+  } else if (typeof mq.addListener === 'function') {
+    mq.addListener(handler);
+  }
+}
+
+// Expose une API simple pour la page paramètres
+function setThemePreference(pref) {
+  try {
+    if (!window.localStorage) return;
+
+    if (pref === 'dark' || pref === 'light') {
+      window.localStorage.setItem('theme', pref);
+    } else if (pref === 'auto') {
+      window.localStorage.setItem('theme', 'auto');
+    } else {
+      window.localStorage.removeItem('theme');
+    }
+  } catch (e) {
+    console.warn('Impossible d\'enregistrer le thème :', e);
+  }
+  applyThemeFromPreference();
+}
+
+window.setThemePreference = setThemePreference;
+window.getThemePreference = getStoredTheme;
+
 // Chargement des headers/footers + header mobile du feed (autonome)
 const loadTasks = [
   ['#site-header', 'includes/header.html'],
@@ -159,4 +232,6 @@ function highlightCurrentPage() {
 Promise.all(loadTasks).then(() => {
   applyBasePrefix(basePrefix);
   highlightCurrentPage();
+  applyThemeFromPreference();
+  listenSystemThemeChanges();
 });
