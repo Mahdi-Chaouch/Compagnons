@@ -30,6 +30,14 @@ body.dark-mode .color-swatch p {
     color: #cbd5e1;
 }
 
+body.dark-mode .swatch-info strong {
+    color: #e5e7eb;
+}
+
+body.dark-mode .swatch-info span {
+    color: #94a3b8;
+}
+
 .artist-credit p,
 .artist-credit .artist-name,
 .artist-credit a {
@@ -38,9 +46,18 @@ body.dark-mode .color-swatch p {
 
 body.dark-mode .artist-credit {
     color: #e2e8f0;
+    background: linear-gradient(135deg, #020617, #020617);
+    border-color: #1f2937;
 }
 body.dark-mode .artist-credit a {
     color: #38bdf8;
+}
+
+body.dark-mode .artist-name {
+    background: linear-gradient(90deg, #38bdf8, #4ade80);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .color-swatch:hover {
@@ -90,6 +107,20 @@ body.dark-mode .artist-credit a {
     color: #1d1d1f;
 }
 
+/* Bloc typo en dark mode */
+body.dark-mode .font-demo {
+    background: #020617;
+    border-left-color: #38bdf8;
+}
+
+body.dark-mode .font-demo h3 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .font-demo p {
+    color: #cbd5e1;
+}
+
 /* Section spéciale pour le Logo Artist */
 .artist-credit {
     text-align: center;
@@ -133,4 +164,16 @@ body.dark-mode .artist-credit a {
     background: #000;
     color: #fff;
     border-color: #000;
+}
+
+body.dark-mode .social-link {
+    color: #e5e7eb;
+    border-color: #334155;
+    background: transparent;
+}
+
+body.dark-mode .social-link:hover {
+    background: linear-gradient(90deg, #1190CB, #2ECC71);
+    color: #ffffff;
+    border-color: transparent;
 }

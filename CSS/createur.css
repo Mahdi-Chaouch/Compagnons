@@ -198,3 +198,56 @@ body.page-createur {
         font-size: 1rem;
     }
 }
+
+/* ==== DARK MODE SPÉCIFIQUE À LA PAGE ÉQUIPE ==== */
+
+body.dark-mode.page-createur {
+    background-color: #0f172a !important;
+}
+
+body.dark-mode .about-hero {
+    background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%) !important;
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode .team-container {
+    /* garde la même structure mais avec plus d'air visuel */
+}
+
+body.dark-mode .profile-card {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .card-header {
+    background: #0b1120 !important;
+    border-color: #1f2937 !important;
+}
+
+body.dark-mode .card-header h2,
+body.dark-mode .role {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode .card-body {
+    background: transparent !important;
+}
+
+body.dark-mode .bio {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .skill-tag {
+    background: #020617 !important;
+    color: #a5b4fc !important;
+    border-color: #1f2937 !important;
+}
+
+body.dark-mode .social-links a {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .social-links a:hover {
+    color: #38bdf8 !important;
+}
