@@ -6,42 +6,47 @@ body.page-createur {
 
 .about-hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: clamp(90px, 12vw, 120px) 20px;
     background: linear-gradient(135deg, #1190CB 0%, #2ECC71 100%);
     color: white;
     margin-bottom: 50px;
 }
 
 .about-hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 4vw, 3rem);
     margin-bottom: 15px;
 }
 
 .about-hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
     opacity: 0.9;
-    max-width: 600px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
 .team-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    align-items: stretch;
     max-width: 1200px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 70px;
     padding: 0 20px;
 }
 
 .profile-card {
     background: white;
-    width: 350px;
+    width: 100%;
+    max-width: 380px;
+    justify-self: center;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .profile-card:hover {
@@ -51,7 +56,7 @@ body.page-createur {
 
 .card-header {
     background: #f4f6f8;
-    padding: 40px 20px 20px;
+    padding: 36px 20px 18px;
     text-align: center;
     border-bottom: 1px solid #eee;
 }
@@ -83,6 +88,10 @@ body.page-createur {
 .card-body {
     padding: 30px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1 1 auto;
 }
 
 .bio {
@@ -97,7 +106,7 @@ body.page-createur {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .skill-tag {
@@ -168,9 +177,27 @@ body.page-createur {
     color: #1190CB;
 }
 
+@media (max-width: 1024px) {
+    .team-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        padding: 0 18px;
+    }
+    .card-body {
+        padding: 26px;
+    }
+    .profile-card {
+        max-width: 100%;
+    }
+    .profile-img img {
+        width: 112px;
+        height: 112px;
+    }
+}
+
 @media (max-width: 768px) {
     .about-hero {
-        padding: 80px 18px;
+        padding: 80px 16px 70px;
     }
     .about-hero h1 {
         font-size: 2.2rem;
@@ -179,23 +206,49 @@ body.page-createur {
         font-size: 1.05rem;
     }
     .team-container {
-        gap: 22px;
-    }
-    .profile-card {
-        width: 100%;
-        max-width: 460px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 0 14px;
     }
     .card-body {
         padding: 22px;
+        gap: 14px;
+    }
+    .profile-img img {
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (max-width: 480px) {
+    .about-hero {
+        padding: 70px 14px 55px;
+    }
     .about-hero h1 {
         font-size: 1.9rem;
     }
     .about-hero p {
-        font-size: 1rem;
+        font-size: 0.98rem;
+    }
+    .team-container {
+        gap: 16px;
+    }
+    .card-body {
+        padding: 18px;
+    }
+    .profile-img img {
+        width: 88px;
+        height: 88px;
+    }
+    .skills {
+        gap: 8px;
+    }
+    .skill-tag {
+        font-size: 0.78rem;
+        padding: 5px 10px;
+    }
+    .social-links a {
+        font-size: 1.3rem;
     }
 }
 
